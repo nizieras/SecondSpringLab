@@ -5,22 +5,17 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 @Service
-public class MyStringAction {
+public class StringServiceImpl implements StringService {
 
-    private final Logger logger = LoggerFactory.getLogger(MyStringAction.class);
+    private final Logger logger = LoggerFactory.getLogger(StringServiceImpl.class);
 
     public String stringToUpCase(String line){
         logger.info("String successfully transfer to up case");
-        return line.toUpperCase();
-    }
-
+        return line.toUpperCase(); }
     public String stringToLowCase(String line){
         logger.info("String successfully transfer to low case");
-        return line.toLowerCase();
-    }
-
+        return line.toLowerCase(); }
     public String stringUnion(String firstLine, String secondLine){
         logger.info("Strings successfully united");
-        return firstLine + secondLine;
-    }
+        return firstLine + secondLine; }
 }
